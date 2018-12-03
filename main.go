@@ -15,10 +15,11 @@ func main() {
 		"github.com/kisielk/errcheck",
 		"github.com/davidrjenni/reftools/cmd/fillstruct",
 		"github.com/mdempsky/gocode",
+		"github.com/stamblerre/gocode",
 		"github.com/rogpeppe/godef",
 		"github.com/zmb3/gogetdoc",
 		"golang.org/x/tools/cmd/goimports",
-		"github.com/golang/lint/golint",
+		"golang.org/x/lint/golint",
 		"github.com/alecthomas/gometalinter",
 		"github.com/fatih/gomodifytags",
 		"golang.org/x/tools/cmd/gorename",
@@ -32,7 +33,7 @@ func main() {
 
 	for _, p := range s {
 		if err := get(p); err != nil {
-			fmt.Printf("go get -u -v %s failed", p)
+			fmt.Printf("go get -u -v %s failed \n", p)
 		}
 	}
 }
